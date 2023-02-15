@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="EethalView" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/EethalView" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-D__Windows7__" />
+					<Add option="-D__WXDEBUG__" />
+					<Add option="-DUNICODE" />
+					<Add directory="C:/wxWidgets-2.9.4/include" />
+					<Add directory="C:/wxWidgets-2.9.4/lib/gcc_dll_Debug_Shared_Monolithic_Unicode/mswud" />
+					<Add directory="ds_filereader_fusion/BinaryTree" />
+					<Add directory="ds_filereader_fusion/BinaryTree/SRC" />
+					<Add directory="C:/MinGW4/include" />
+					<Add directory="D:/other/Project/ViewerCode/EethalView_project" />
+					<Add directory="D:/other/Project/ViewerCode/EethalView_project/GL" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="C:/wxWidgets-2.9.4/include" />
+					<Add directory="C:/wxWidgets-2.9.4/lib/gcc_dll_Debug_Shared_Monolithic_Unicode/mswud" />
+				</ResourceCompiler>
+				<Linker>
+					<Add library="GL/glext.lib" />
+					<Add library="GL/glew32.lib" />
+					<Add library="GL/GLU32.LIB" />
+					<Add library="GL/glut32.lib" />
+					<Add library="GL/OPENGL32.LIB" />
+					<Add library="C:/wxWidgets-2.9.4/lib/gcc_dll_Debug_Shared_Monolithic_Unicode/libwxmsw29ud.a" />
+					<Add library="C:/wxWidgets-2.9.4/lib/gcc_dll_Debug_Shared_Monolithic_Unicode/libwxmsw29ud_gl.a" />
+					<Add directory="C:/wxWidgets-2.9.4/lib/gcc_dll_Debug_Shared_Monolithic_Unicode" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/EethalView" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-O3" />
+					<Add option="-O2" />
+					<Add option="-O1" />
+					<Add option="-O" />
+					<Add option="-DGL_GLEXT_PROTOTYPES" />
+					<Add option="-DUNICODE" />
+					<Add directory="C:/wxWidgets-2.9.4/include" />
+					<Add directory="C:/wxWidgets-2.9.4/lib/gcc_dll_Release_Shared_Monolithic_Unicode/mswu" />
+					<Add directory="ds_filereader_fusion/BinaryTree" />
+					<Add directory="ds_filereader_fusion/BinaryTree/SRC" />
+					<Add directory="C:/MinGW4/include" />
+					<Add directory="D:/other/Project/ViewerCode/EethalView_project" />
+					<Add directory="D:/other/Project/ViewerCode/EethalView_project/GL" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="C:/wxWidgets-2.9.4/include" />
+					<Add directory="C:/wxWidgets-2.9.4/lib/gcc_dll_Release_Shared_Monolithic_Unicode/mswu" />
+				</ResourceCompiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="GL/glew32.lib" />
+					<Add library="GL/GLU32.LIB" />
+					<Add library="GL/glut32.lib" />
+					<Add library="GL/OPENGL32.LIB" />
+					<Add library="C:/wxWidgets-2.9.4/lib/gcc_dll_Release_Shared_Monolithic_Unicode/libwxmsw29u.a" />
+					<Add library="C:/wxWidgets-2.9.4/lib/gcc_dll_Release_Shared_Monolithic_Unicode/libwxmsw29u_gl.a" />
+					<Add library="D:/other/Project/ViewerCode/EethalView_project/GL/glext.lib" />
+					<Add directory="C:/wxWidgets-2.9.4/lib/gcc_dll_Release_Shared_Monolithic_Unicode" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-g" />
+			<Add option="-D__GNUWIN32__" />
+			<Add option="-D__Windows7__" />
+			<Add option="-DWXUSINGDLL" />
+			<Add option="-DwxUSE_UNICODE" />
+			<Add directory="C:/wxWidgets-2.9.4/include" />
+		</Compiler>
+		<ResourceCompiler>
+			<Add directory="C:/wxWidgets-2.9.4/include" />
+		</ResourceCompiler>
+		<Unit filename="ai.cpp" />
+		<Unit filename="ai.h" />
+		<Unit filename="basicglpane.cpp" />
+		<Unit filename="basicglpane.h" />
+		<Unit filename="caboutwindow.cpp" />
+		<Unit filename="caboutwindow.h" />
+		<Unit filename="cbasicmenubar.cpp" />
+		<Unit filename="cbasicmenubar.h" />
+		<Unit filename="cbasictoolbar.cpp" />
+		<Unit filename="cbasictoolbar.h" />
+		<Unit filename="cloadingwindow.cpp" />
+		<Unit filename="cloadingwindow.h" />
+		<Unit filename="ctextcontrol.cpp" />
+		<Unit filename="ctextcontrol.h" />
+		<Unit filename="ctreeview.cpp" />
+		<Unit filename="ctreeview.h" />
+		<Unit filename="cviewerintroimage.cpp" />
+		<Unit filename="cviewerintroimage.h" />
+		<Unit filename="ds_filereader_fusion/BinaryTree/NastranOp2Parser/Element/nastranop2element.cpp" />
+		<Unit filename="ds_filereader_fusion/BinaryTree/NastranOp2Parser/Element/nastranop2element.h" />
+		<Unit filename="ds_filereader_fusion/BinaryTree/NastranOp2Parser/Element/read_element.cpp" />
+		<Unit filename="ds_filereader_fusion/BinaryTree/NastranOp2Parser/Node/nastranop2node.cpp" />
+		<Unit filename="ds_filereader_fusion/BinaryTree/NastranOp2Parser/Node/nastranop2node.h" />
+		<Unit filename="ds_filereader_fusion/BinaryTree/NastranOp2Parser/Node/read_node.cpp" />
+		<Unit filename="ds_filereader_fusion/BinaryTree/NastranOp2Parser/Op2/nastranop2.cpp" />
+		<Unit filename="ds_filereader_fusion/BinaryTree/NastranOp2Parser/Op2/nastranop2.h" />
+		<Unit filename="ds_filereader_fusion/BinaryTree/NastranOp2Parser/Op2/ofpmethods.cpp" />
+		<Unit filename="ds_filereader_fusion/BinaryTree/NastranOp2Parser/Op2/read_oee.cpp" />
+		<Unit filename="ds_filereader_fusion/BinaryTree/NastranOp2Parser/Op2/read_oes.cpp" />
+		<Unit filename="ds_filereader_fusion/BinaryTree/NastranOp2Parser/Op2/read_ogf.cpp" />
+		<Unit filename="ds_filereader_fusion/BinaryTree/NastranOp2Parser/Op2/read_op2.cpp" />
+		<Unit filename="ds_filereader_fusion/BinaryTree/NastranOp2Parser/Op2/read_opg.cpp" />
+		<Unit filename="ds_filereader_fusion/BinaryTree/NastranOp2Parser/Op2/read_oqg.cpp" />
+		<Unit filename="ds_filereader_fusion/BinaryTree/NastranOp2Parser/Op2/read_oug.cpp" />
+		<Unit filename="ds_filereader_fusion/BinaryTree/NastranOp2Parser/Op2/resultelementtype.cpp" />
+		<Unit filename="ds_filereader_fusion/BinaryTree/NastranOp2Parser/Utilities/utilities.cpp" />
+		<Unit filename="ds_filereader_fusion/BinaryTree/NastranOp2Parser/Utilities/utilities.h" />
+		<Unit filename="ds_filereader_fusion/BinaryTree/celement.cpp" />
+		<Unit filename="ds_filereader_fusion/BinaryTree/celement.h" />
+		<Unit filename="ds_filereader_fusion/BinaryTree/cnode.cpp" />
+		<Unit filename="ds_filereader_fusion/BinaryTree/cnode.h" />
+		<Unit filename="ds_filereader_fusion/RedblackTree_bdf/NastranBdfParser/nastranbdf.cpp" />
+		<Unit filename="ds_filereader_fusion/RedblackTree_bdf/NastranBdfParser/nastranbdf.h" />
+		<Unit filename="ds_filereader_fusion/RedblackTree_bdf/celement_bdf.cpp" />
+		<Unit filename="ds_filereader_fusion/RedblackTree_bdf/celement_bdf.h" />
+		<Unit filename="ds_filereader_fusion/RedblackTree_bdf/cnode_bdf.cpp" />
+		<Unit filename="ds_filereader_fusion/RedblackTree_bdf/cnode_bdf.h" />
+		<Unit filename="exportdata.cpp" />
+		<Unit filename="exportdata.h" />
+		<Unit filename="graph/MainFunction.cpp" />
+		<Unit filename="graph/RenderNode.cpp" />
+		<Unit filename="graph/RenderNode.h" />
+		<Unit filename="graph/node.cpp" />
+		<Unit filename="graph/node.h" />
+		<Unit filename="graphframe.cpp" />
+		<Unit filename="graphframe.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="main.h" />
+		<Unit filename="resource.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
+		<Unit filename="spoint.cpp" />
+		<Unit filename="spoint.h" />
+		<Extensions>
+			<code_completion />
+			<debugger>
+				<search_path add="C:\MinGW\bin" />
+			</debugger>
+			<envvars />
+			<DoxyBlocks>
+				<comment_style block="2" line="2" />
+				<doxyfile_project project_number="1" output_directory="Project\ViewerCode\GraphicsWindow_code\wxglcanvas\doxygen" />
+				<doxyfile_build extract_all="1" />
+				<doxyfile_warnings />
+				<doxyfile_output />
+				<doxyfile_dot class_diagrams="1" />
+				<general />
+			</DoxyBlocks>
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
