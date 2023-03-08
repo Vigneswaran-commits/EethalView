@@ -7,6 +7,6 @@ OPERATING SYSTEM :
 
 Windows 10/8/7/vista/Xp/2000/98/95
 
-![Eethal View](Image_UI.png)
-![Inbuilt Plotter](Image_StressStrainPlot.png)
-![Exported Results](Image_TextResults.png)
+![Eethal View](Image_UI.PNG)
+![Inbuilt Plotter](Image_StressStrainPlot.PNG)
+![Exported Results](Image_TextResults.PNG)
