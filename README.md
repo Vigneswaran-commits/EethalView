@@ -10,3 +10,5 @@ Windows 10/8/7/vista/Xp/2000/98/95
 ![Eethal View](Image_UI.PNG)
 ![Inbuilt Plotter](Image_StressStrainPlot.PNG)
 ![Exported Results](Image_TextResults.PNG)
+
+Velocity based collision detection algorithm is being tested.
