@@ -2,7 +2,7 @@
 #include<windows.h>
 #include "RenderNode.h"
 #include "cbasicmenubar.h"
-#include "D:\other\Project\ViewerCode\EethalView_project\exportdata.h"
+#include "exportdata.h"
 #include "node.h"
 #include"vector"
 #include "GL/glut.h"

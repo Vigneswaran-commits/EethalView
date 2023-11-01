@@ -16,17 +16,16 @@
 					<Add option="-D__Windows7__" />
 					<Add option="-D__WXDEBUG__" />
 					<Add option="-DUNICODE" />
-					<Add directory="C:/wxWidgets-2.9.4/include" />
-					<Add directory="C:/wxWidgets-2.9.4/lib/gcc_dll_Debug_Shared_Monolithic_Unicode/mswud" />
+					<Add directory="C:/wxWidgets-2.9.3/include" />
+					<Add directory="C:/wxWidgets-2.9.3/lib/gcc_dll_Debug_Shared_Monolithic_Unicode/mswud" />
 					<Add directory="ds_filereader_fusion/BinaryTree" />
 					<Add directory="ds_filereader_fusion/BinaryTree/SRC" />
-					<Add directory="C:/MinGW4/include" />
-					<Add directory="D:/other/Project/ViewerCode/EethalView_project" />
-					<Add directory="D:/other/Project/ViewerCode/EethalView_project/GL" />
+					<Add directory="C:/Users/Admin/Downloads/EethalView" />
+					<Add directory="C:/Users/Admin/Downloads/EethalView/GL" />
 				</Compiler>
 				<ResourceCompiler>
-					<Add directory="C:/wxWidgets-2.9.4/include" />
-					<Add directory="C:/wxWidgets-2.9.4/lib/gcc_dll_Debug_Shared_Monolithic_Unicode/mswud" />
+					<Add directory="C:/wxWidgets-2.9.3/include" />
+					<Add directory="C:/wxWidgets-2.9.3/lib/gcc_dll_Debug_Shared_Monolithic_Unicode/mswud" />
 				</ResourceCompiler>
 				<Linker>
 					<Add library="GL/glext.lib" />
@@ -34,9 +33,9 @@
 					<Add library="GL/GLU32.LIB" />
 					<Add library="GL/glut32.lib" />
 					<Add library="GL/OPENGL32.LIB" />
-					<Add library="C:/wxWidgets-2.9.4/lib/gcc_dll_Debug_Shared_Monolithic_Unicode/libwxmsw29ud.a" />
-					<Add library="C:/wxWidgets-2.9.4/lib/gcc_dll_Debug_Shared_Monolithic_Unicode/libwxmsw29ud_gl.a" />
-					<Add directory="C:/wxWidgets-2.9.4/lib/gcc_dll_Debug_Shared_Monolithic_Unicode" />
+					<Add library="C:/wxWidgets-2.9.3/lib/gcc_dll_Debug_Shared_Monolithic_Unicode/libwxmsw29ud.a" />
+					<Add library="C:/wxWidgets-2.9.3/lib/gcc_dll_Debug_Shared_Monolithic_Unicode/libwxmsw29ud_gl.a" />
+					<Add directory="C:/wxWidgets-2.9.3/lib/gcc_dll_Debug_Shared_Monolithic_Unicode" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -52,17 +51,16 @@
 					<Add option="-O" />
 					<Add option="-DGL_GLEXT_PROTOTYPES" />
 					<Add option="-DUNICODE" />
-					<Add directory="C:/wxWidgets-2.9.4/include" />
-					<Add directory="C:/wxWidgets-2.9.4/lib/gcc_dll_Release_Shared_Monolithic_Unicode/mswu" />
+					<Add directory="C:/wxWidgets-2.9.3/include" />
+					<Add directory="C:/wxWidgets-2.9.3/lib/gcc_dll_Release_Shared_Monolithic_Unicode/mswu" />
 					<Add directory="ds_filereader_fusion/BinaryTree" />
 					<Add directory="ds_filereader_fusion/BinaryTree/SRC" />
-					<Add directory="C:/MinGW4/include" />
-					<Add directory="D:/other/Project/ViewerCode/EethalView_project" />
-					<Add directory="D:/other/Project/ViewerCode/EethalView_project/GL" />
+					<Add directory="C:/Users/Admin/Downloads/EethalView" />
+					<Add directory="C:/Users/Admin/Downloads/EethalView/GL" />
 				</Compiler>
 				<ResourceCompiler>
-					<Add directory="C:/wxWidgets-2.9.4/include" />
-					<Add directory="C:/wxWidgets-2.9.4/lib/gcc_dll_Release_Shared_Monolithic_Unicode/mswu" />
+					<Add directory="C:/wxWidgets-2.9.3/include" />
+					<Add directory="C:/wxWidgets-2.9.3/lib/gcc_dll_Release_Shared_Monolithic_Unicode/mswu" />
 				</ResourceCompiler>
 				<Linker>
 					<Add option="-s" />
@@ -70,10 +68,10 @@
 					<Add library="GL/GLU32.LIB" />
 					<Add library="GL/glut32.lib" />
 					<Add library="GL/OPENGL32.LIB" />
-					<Add library="C:/wxWidgets-2.9.4/lib/gcc_dll_Release_Shared_Monolithic_Unicode/libwxmsw29u.a" />
-					<Add library="C:/wxWidgets-2.9.4/lib/gcc_dll_Release_Shared_Monolithic_Unicode/libwxmsw29u_gl.a" />
-					<Add library="D:/other/Project/ViewerCode/EethalView_project/GL/glext.lib" />
-					<Add directory="C:/wxWidgets-2.9.4/lib/gcc_dll_Release_Shared_Monolithic_Unicode" />
+					<Add library="C:/wxWidgets-2.9.3/lib/gcc_dll_Release_Shared_Monolithic_Unicode/libwxmsw29u.a" />
+					<Add library="C:/wxWidgets-2.9.3/lib/gcc_dll_Release_Shared_Monolithic_Unicode/libwxmsw29u_gl.a" />
+					<Add library="C:/Users/Admin/Downloads/EethalView/GL/glext.lib" />
+					<Add directory="C:/wxWidgets-2.9.3/lib/gcc_dll_Release_Shared_Monolithic_Unicode" />
 				</Linker>
 			</Target>
 		</Build>
@@ -84,10 +82,10 @@
 			<Add option="-D__Windows7__" />
 			<Add option="-DWXUSINGDLL" />
 			<Add option="-DwxUSE_UNICODE" />
-			<Add directory="C:/wxWidgets-2.9.4/include" />
+			<Add directory="C:/wxWidgets-2.9.3/include" />
 		</Compiler>
 		<ResourceCompiler>
-			<Add directory="C:/wxWidgets-2.9.4/include" />
+			<Add directory="C:/wxWidgets-2.9.3/include" />
 		</ResourceCompiler>
 		<Unit filename="ai.cpp" />
 		<Unit filename="ai.h" />
@@ -153,11 +151,6 @@
 		<Unit filename="spoint.cpp" />
 		<Unit filename="spoint.h" />
 		<Extensions>
-			<code_completion />
-			<debugger>
-				<search_path add="C:\MinGW\bin" />
-			</debugger>
-			<envvars />
 			<DoxyBlocks>
 				<comment_style block="2" line="2" />
 				<doxyfile_project project_number="1" output_directory="Project\ViewerCode\GraphicsWindow_code\wxglcanvas\doxygen" />
@@ -167,6 +160,9 @@
 				<doxyfile_dot class_diagrams="1" />
 				<general />
 			</DoxyBlocks>
+			<debugger>
+				<search_path add="C:\MinGW\bin" />
+			</debugger>
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>
