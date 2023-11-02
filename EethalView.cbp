@@ -13,7 +13,6 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
-					<Add option="-D__Windows7__" />
 					<Add option="-D__WXDEBUG__" />
 					<Add option="-DUNICODE" />
 					<Add directory="C:/wxWidgets-2.9.3/include" />
@@ -28,11 +27,10 @@
 					<Add directory="C:/wxWidgets-2.9.3/lib/gcc_dll_Debug_Shared_Monolithic_Unicode/mswud" />
 				</ResourceCompiler>
 				<Linker>
-					<Add library="GL/glext.lib" />
-					<Add library="GL/glew32.lib" />
-					<Add library="GL/GLU32.LIB" />
-					<Add library="GL/glut32.lib" />
-					<Add library="GL/OPENGL32.LIB" />
+					<Add library="C:/Users/Admin/Downloads/EethalView/GL/glext.lib" />
+					<Add library="C:/Users/Admin/Downloads/EethalView/GL/GLU32.LIB" />
+					<Add library="C:/Users/Admin/Downloads/EethalView/GL/glut32.lib" />
+					<Add library="C:/Users/Admin/Downloads/EethalView/GL/OPENGL32.LIB" />
 					<Add library="C:/wxWidgets-2.9.3/lib/gcc_dll_Debug_Shared_Monolithic_Unicode/libwxmsw29ud.a" />
 					<Add library="C:/wxWidgets-2.9.3/lib/gcc_dll_Debug_Shared_Monolithic_Unicode/libwxmsw29ud_gl.a" />
 					<Add directory="C:/wxWidgets-2.9.3/lib/gcc_dll_Debug_Shared_Monolithic_Unicode" />
@@ -82,11 +80,7 @@
 			<Add option="-D__Windows7__" />
 			<Add option="-DWXUSINGDLL" />
 			<Add option="-DwxUSE_UNICODE" />
-			<Add directory="C:/wxWidgets-2.9.3/include" />
 		</Compiler>
-		<ResourceCompiler>
-			<Add directory="C:/wxWidgets-2.9.3/include" />
-		</ResourceCompiler>
 		<Unit filename="ai.cpp" />
 		<Unit filename="ai.h" />
 		<Unit filename="basicglpane.cpp" />

@@ -1,0 +1,19 @@
+/**********************For debug libraries**********************/
+Open cmd prompt in the folder, C:\wxWidgets-2.9.3\build\msw
+
+mingw32-make.exe -f makefile.gcc USE_XRC=1 SHARED=1 MONOLITHIC=1 BUILD=debug UNICODE=1
+
+mingw32-make.exe -f makefile.gcc clean USE_XRC=1 SHARED=1 MONOLITHIC=1 BUILD=debug UNICODE=1
+
+Rename C:\wxWidgets-2.9.3\lib\gcc_dll to gcc_dll_Debug_Shared_Monolithic_Unicode, 
+and copy the two dlls to EethalView.exe folder
+
+/**********************For release libraries**********************/
+Open cmd prompt in the folder, C:\wxWidgets-2.9.3\build\msw
+
+mingw32-make.exe -f makefile.gcc USE_XRC=1 SHARED=1 MONOLITHIC=1 BUILD=release UNICODE=1
+
+mingw32-make.exe -f makefile.gcc clean USE_XRC=1 SHARED=1 MONOLITHIC=1 BUILD=release UNICODE=1
+
+Rename C:\wxWidgets-2.9.3\lib\gcc_dll to gcc_dll_Release_Shared_Monolithic_Unicode, 
+and copy the two dlls to EethalView.exe folder
