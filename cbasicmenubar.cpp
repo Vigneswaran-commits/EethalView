@@ -725,16 +725,7 @@ void CBasicMenubar::FreeCreatedMemory()
 // Called when File > Exit option is selected
 void CBasicMenubar::OnQuit(wxCommandEvent& WXUNUSED(event))
 {
-    // Free memory created for embedded items and windows
-    FreeCreatedMemory();
-
-    BasicGLPane::UnsetAutoRotation();
-    //crash ceck //pAiFrame->FreeDataStructureMemory();    //delete memory (bdf data)
-                    //closes viewer frame
-    //if(pOutputConsole && pOutputConsole->isOutputConsolePresent())
-    //    pOutputConsole->Close(true);//viewer frame closes the output console with it
-
-    //Close(true);
+    Close();
 }
 
 void CBasicMenubar::OnClose(wxCloseEvent& event)
@@ -749,6 +740,9 @@ void CBasicMenubar::OnClose(wxCloseEvent& event)
     //    pOutputConsole->Close(true);//viewer frame closes the output console with it
 
     //Close(true);
+
+    // Call the base class OnClose to ensure proper cleanup
+    event.Skip();
 }
 
 CBasicMenubar::~CBasicMenubar()

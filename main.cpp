@@ -35,10 +35,12 @@ bool MyApp::OnInit()
     pIntroImage = new CViewerIntroImage(NULL,wxT("IntroductionImage"));
     pIntroImage->Show(true);
     pIntroImage->SetFocus();
+
     pViewerFrame = new CBasicMenubar(wxT("Eethal Viewer"));
     pViewerFrame->SetAutoLayout(true);
     pViewerFrame->SetIcons(wxIconBundle("images/logo/mainframe.png",wxBITMAP_TYPE_PNG));
     pViewerFrame->Show(true);
+
     pIntroImage->Close(true);
     if(pIntroImage)
     {
@@ -50,6 +52,16 @@ bool MyApp::OnInit()
 
 int MyApp::OnExit()
 {
+    // Eethalview application specific cleanup is done here
+    if(pViewerFrame)
+    {
+        delete pViewerFrame;
+        pViewerFrame = NULL;
+    }
+
+    // This allows the base wxApp class to perform its cleanup.
+    // By returning wxApp::OnExit(), default cleanup provided by wxApp is done here
+    return wxApp::OnExit(); // Zero for success, non-zero for error
 }
 
 void MyApp::CleanUp()
@@ -99,6 +111,7 @@ BEGIN_EVENT_TABLE(CRenderNode, wxGLCanvas)
     EVT_PAINT(CRenderNode::Render)
 END_EVENT_TABLE()
 
+//-------------------------------------------------------------------
 /*finds the cross product of two vectors
     float fVector1[3],fVector2[3];
 float fVertex1[3],fVertex2[3],fVertex3[3];
@@ -132,3 +145,4 @@ else if(iIncrement == 5)
     fNormal[1]=fVector1[2]*fVector2[0] - fVector1[0]*fVector2[2];
     fNormal[2]=fVector1[0]*fVector2[1] - fVector1[1]*fVector2[0];
 */
+//-------------------------------------------------------------------
