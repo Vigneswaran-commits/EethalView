@@ -387,6 +387,9 @@ CBasicMenubar::CBasicMenubar(const wxString& title) : wxFrame(NULL, wxID_ANY, ti
 
 void CBasicMenubar::setstate(wxIdleEvent& event)
 {
+    if(glPane == NULL)
+        return;
+
     if(this->IsActive())
         glPane->CanSetFocus(true);
     else
@@ -521,26 +524,6 @@ void CBasicMenubar::Display_StressXZ(wxCommandEvent& event)
     glPane->Getrbg_with_StressMinMax(6);
 }
 
-void CBasicMenubar::OnQuit(wxCommandEvent& WXUNUSED(event))
-{
-    BasicGLPane::UnsetAutoRotation();
-    glPane->FreeDataStructureMemory();       //delete memory (op2 data)
-    //crash ceck //pAiFrame->FreeDataStructureMemory();    //delete memory (bdf data)
-    Close(true);                //closes viewer frame
-    if(pOutputConsole->isOutputConsolePresent())
-        pOutputConsole->Close(true);//viewer frame closes the output console with it
-}
-
-void CBasicMenubar::OnClose(wxCloseEvent& event)
-{
-    BasicGLPane::UnsetAutoRotation();
-    glPane->FreeDataStructureMemory();       //delete memory (op2 data)
-    //crash ceck //pAiFrame->FreeDataStructureMemory();    //delete memory (bdf data)
-    Close(true);                //closes viewer frame
-    if(pOutputConsole->isOutputConsolePresent())
-        pOutputConsole->Close(true);//viewer frame closes the output console with it
-}
-
 void CBasicMenubar::OnGraphQuit(wxCommandEvent& WXUNUSED(event))
 {
     //pGraph = NULL;
@@ -659,45 +642,6 @@ void CBasicMenubar::LaunchAi(wxCommandEvent& event)
     pAiFrame->Show(true);
 }
 
-CBasicMenubar::~CBasicMenubar()
-{
-    //clear embedded items and other frames
-    //delete the treeview pointer
-    if(treeviewModelHierarchy)
-    {
-        delete treeviewModelHierarchy;
-        treeviewModelHierarchy = NULL;
-    }
-
-    //delete the OpenGL window
-    if(glPane)
-    {
-        delete glPane;
-        glPane = NULL;
-    }
-
-    //viewer frame closes the output console with it
-    if(pOutputConsole && pOutputConsole->isOutputConsolePresent())
-    {
-        delete pOutputConsole;
-        pOutputConsole = NULL;
-    }
-
-    //viewer frame closes the graph frame with it
-    if(pGraphFrame && pGraphFrame->isGraphWindowPresent())
-    {
-        delete pGraphFrame;
-        pGraphFrame = NULL;
-    }
-
-    //viewer frame closes the ai frame with it
-    if(pAiFrame && pAiFrame->isAiWindowPresent())
-    {
-        delete pAiFrame;
-        pAiFrame = NULL;
-    }
-}
-
 /*Static Keyboard function*/
 //void CBasicMenubar::g_keyboardfunc(unsigned char iKey,int iXvalue,int iYvalue)
 //{
@@ -734,3 +678,82 @@ void  CBasicMenubar::g_Timer(int iValue)
 //{
 //    //pGraph->Draw_Method();
 //}
+
+void CBasicMenubar::FreeCreatedMemory()
+{
+    //clear embedded items and other frames
+    //delete the treeview pointer
+    if(treeviewModelHierarchy)
+    {
+        delete treeviewModelHierarchy;
+        treeviewModelHierarchy = NULL;
+    }
+
+    // Delete the opengl window
+    // ஓபன்சிஎள் சாளரத்தை நீக்கவும்
+    if(glPane)
+    {
+        glPane->FreeDataStructureMemory();       //delete memory (op2 data)
+        delete glPane;
+        glPane = NULL;
+    }
+
+    //viewer frame closes the output console with it
+    if(pOutputConsole && pOutputConsole->isOutputConsolePresent())
+    {
+        pOutputConsole->SetOutputConsoleStatus(false);
+        delete pOutputConsole;
+        pOutputConsole = NULL;
+
+    }
+
+    //viewer frame closes the graph frame with it
+    if(pGraphFrame && pGraphFrame->isGraphWindowPresent())
+    {
+        delete pGraphFrame;
+        pGraphFrame = NULL;
+    }
+
+    //viewer frame closes the ai frame with it
+    if(pAiFrame && pAiFrame->isAiWindowPresent())
+    {
+        delete pAiFrame;
+        pAiFrame = NULL;
+    }
+}
+
+// Called when File > Exit option is selected
+void CBasicMenubar::OnQuit(wxCommandEvent& WXUNUSED(event))
+{
+    // Free memory created for embedded items and windows
+    FreeCreatedMemory();
+
+    BasicGLPane::UnsetAutoRotation();
+    //crash ceck //pAiFrame->FreeDataStructureMemory();    //delete memory (bdf data)
+                    //closes viewer frame
+    //if(pOutputConsole && pOutputConsole->isOutputConsolePresent())
+    //    pOutputConsole->Close(true);//viewer frame closes the output console with it
+
+    //Close(true);
+}
+
+void CBasicMenubar::OnClose(wxCloseEvent& event)
+{
+    // Free memory created for embedded items and windows
+    FreeCreatedMemory();
+
+    BasicGLPane::UnsetAutoRotation();
+    //crash ceck //pAiFrame->FreeDataStructureMemory();    //delete memory (bdf data)
+                    //closes viewer frame
+    //if(pOutputConsole && pOutputConsole->isOutputConsolePresent())
+    //    pOutputConsole->Close(true);//viewer frame closes the output console with it
+
+    //Close(true);
+}
+
+CBasicMenubar::~CBasicMenubar()
+{
+    // delete if any embedded windows and related memories are there
+    if(treeviewModelHierarchy || glPane || pOutputConsole || pGraphFrame || pAiFrame)
+        FreeCreatedMemory();
+}

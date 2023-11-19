@@ -9,6 +9,8 @@ private:
     CViewerIntroImage* pIntroImage;
     CBasicMenubar *pViewerFrame;
 public:
+    MyApp() {};
+    ~MyApp() {};
     virtual bool OnInit();
     virtual int OnExit();
     virtual void CleanUp();

@@ -69,12 +69,12 @@ BasicGLPane::BasicGLPane(wxFrame* parent, int* args) :
     m_fTmp = 0.0;
     mstrResultId = ""; miSubcaseId = 0;
     /*read deer head once*/
-    SetSTLFilePath("images/resources");
-    SetSTLFileName("deer_head.stl");
-    mbread_deerhead = true;
-    ReadStlFile();
-    mbread_deerhead = false;
-    mbDeerHeadPopulated = true;
+//    SetSTLFilePath("images/resources");
+//    SetSTLFileName("deer_head.stl");
+//    mbread_deerhead = true;
+//    ReadStlFile();
+//    mbread_deerhead = false;
+//    mbDeerHeadPopulated = true;
     /*-------------------*/
     // To avoid flashing on MSW
     SetBackgroundStyle(wxBG_STYLE_CUSTOM);

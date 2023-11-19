@@ -17,6 +17,16 @@ CTextControl::CTextControl(wxFrame* parent,const wxString& title) : wxFrame(pare
     cout.rdbuf(pTextControl);
 }
 
+void CTextControl::SetOutputConsoleStatus(bool OutConsoleStatus)
+{
+    bOutputConsolePresent = OutConsoleStatus;
+}
+
+bool CTextControl::GetOutputConsoleStatus()
+{
+    return bOutputConsolePresent;
+}
+
 bool CTextControl::isOutputConsolePresent()
 {
     if(bOutputConsolePresent)

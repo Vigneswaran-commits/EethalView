@@ -27,6 +27,8 @@
 					<Add directory="C:/wxWidgets-2.9.3/lib/gcc_dll_Debug_Shared_Monolithic_Unicode/mswud" />
 				</ResourceCompiler>
 				<Linker>
+					<Add library="C:/Users/Admin/Downloads/EethalView/GL/glew32.lib" />
+					<Add library="C:/Users/Admin/Downloads/EethalView/GL/glew32s.lib" />
 					<Add library="C:/Users/Admin/Downloads/EethalView/GL/glext.lib" />
 					<Add library="C:/Users/Admin/Downloads/EethalView/GL/GLU32.LIB" />
 					<Add library="C:/Users/Admin/Downloads/EethalView/GL/glut32.lib" />

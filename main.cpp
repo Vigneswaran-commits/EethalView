@@ -40,6 +40,11 @@ bool MyApp::OnInit()
     pViewerFrame->SetIcons(wxIconBundle("images/logo/mainframe.png",wxBITMAP_TYPE_PNG));
     pViewerFrame->Show(true);
     pIntroImage->Close(true);
+    if(pIntroImage)
+    {
+        delete pIntroImage;
+        pIntroImage = NULL;
+    }
     return true;
 }
 
@@ -49,6 +54,7 @@ int MyApp::OnExit()
 
 void MyApp::CleanUp()
 {
+
 }
 
 //main application frame

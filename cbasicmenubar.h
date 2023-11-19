@@ -47,9 +47,6 @@ public:
     //friend
     friend void GetElemInfoFromGlpane(BasicGLPane* &);
 
-    void OnQuit(wxCommandEvent& event);
-    void OnClose(wxCloseEvent& event);
-    void OnGraphQuit(wxCommandEvent& WXUNUSED(event));
     void OnNew(wxCommandEvent& WXUNUSED(event));
     void OnOpen(wxCommandEvent& WXUNUSED(event));
     void OnSave(wxCommandEvent& WXUNUSED(event));
@@ -77,6 +74,12 @@ public:
     static void g_Init();
     static void g_Timer(int iValue);
     static void g_Drawfunc();
+
+    // clear all memory and close the windows
+    void FreeCreatedMemory();
+    void OnQuit(wxCommandEvent& event);
+    void OnClose(wxCloseEvent& event);
+    void OnGraphQuit(wxCommandEvent& WXUNUSED(event));
     ~CBasicMenubar();
 
     DECLARE_EVENT_TABLE()

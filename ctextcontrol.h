@@ -8,6 +8,8 @@ class CTextControl : public wxFrame
 {
 public:
     CTextControl(wxFrame* parent,const wxString& title);
+    void SetOutputConsoleStatus(bool OutConsoleStatus);
+    bool GetOutputConsoleStatus();
     bool isOutputConsolePresent();
     void Active();
     ~CTextControl();
